@@ -49,6 +49,12 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Gems to make life better for Emacs boomers
+  gem "pry"
+  gem "pry-doc"
+  gem "readline"
+  gem "readline-ext"
 end
 
 group :development do
