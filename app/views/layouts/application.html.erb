@@ -23,7 +23,9 @@
   </head>
 
   <body>
-    <nav>
+    <div class="notice"><%= notice %></div>
+
+    <nav aria-label="Main navigation">
       <%= link_to "Home", root_path %>
       <%= link_to "Log in", new_session_path unless authenticated? %>
       <%= button_to "Log out", session_path, method: :delete if authenticated? %>
