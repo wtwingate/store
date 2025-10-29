@@ -17,7 +17,7 @@ class Store::ProductsController < Store::BaseController
     if @product.save
       redirect_to store_product_path(@product)
     else
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_content
     end
   end
 
@@ -28,7 +28,7 @@ class Store::ProductsController < Store::BaseController
     if @product.update(product_params)
       redirect_to store_product_path(@product)
     else
-      render :edit, status: :unprocessable_entity
+      render :edit, status: :unprocessable_content
     end
   end
 

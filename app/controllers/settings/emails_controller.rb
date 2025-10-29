@@ -7,7 +7,7 @@ class Settings::EmailsController < Settings::BaseController
       UserMailer.with(user: Current.user).email_confirmation.deliver_later
       redirect_to settings_email_path, status: :see_other, notice: "We've sent a verification email to #{Current.user.unconfirmed_email}."
     else
-      render :show, status: :unprocessable_entity
+      render :show, status: :unprocessable_content
     end
   end
 

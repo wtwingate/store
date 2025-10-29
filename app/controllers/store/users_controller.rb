@@ -15,7 +15,7 @@ class Store::UsersController < Store::BaseController
     if @user.update(user_params)
       redirect_to store_user_path(@user), status: :see_other, notice: "User has been updated"
     else
-      render :edit, status: :unprocessable_entity
+      render :edit, status: :unprocessable_content
     end
   end
 
