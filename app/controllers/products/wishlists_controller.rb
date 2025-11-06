@@ -3,7 +3,7 @@ class Products::WishlistsController < ApplicationController
   before_action :set_wishlist
 
   def create
-    @wishlist.wishlist_products.create!(product: @product)
+    @wishlist.wishlist_products.create(product: @product)
     redirect_to @wishlist, notice: "#{@product.name} added to wishlist."
   end
 
