@@ -7,3 +7,7 @@ tshirt:
 pants:
   name: Pants
   inventory_count: 10
+
+shoes:
+  name: Shoes
+  inventory_count: 0
