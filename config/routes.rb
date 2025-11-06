@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   root "products#index"
 
   resources :products do
+    resource :wishlist, only: [ :create ], module: :products
     resources :subscribers, only: [ :create ]
   end
 
